@@ -26,6 +26,7 @@ namespace ConsoleApp1
             plainText = System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
             Console.WriteLine(plainText);
 
+
             Console.ReadLine();
         }
     }
