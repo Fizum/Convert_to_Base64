@@ -10,7 +10,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string plainText = "Man";
+
+            Console.WriteLine("inserisci una parola da convertire");
+            string plainText = Console.ReadLine();
             string base64EncodedData;
             var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
             for (int i = 0; i < plainTextBytes.Length; i++)
