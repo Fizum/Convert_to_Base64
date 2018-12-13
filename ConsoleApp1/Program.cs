@@ -17,8 +17,8 @@ namespace ConsoleApp1
             byte[] plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
             for (int i = 0; i < plainTextBytes.Length; i++)
             {
-                Console.WriteLine(plainTextBytes[i]);
-                Console.WriteLine(Convert.ToString(plainTextBytes[i], 2));
+                Console.WriteLine($"{plainText[i]} = {plainTextBytes[i]} = {Convert.ToString(plainTextBytes[i], 2)}");
+                
             }
 
             base64EncodedData = Convert.ToBase64String(plainTextBytes);
@@ -26,8 +26,15 @@ namespace ConsoleApp1
 
             byte[] base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
             plainText = System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
-            Console.WriteLine(plainText);
+            Console.WriteLine($"la codifica in base 64 della parola {plainText} è {base64EncodedData}");
 
+
+            int value = 0;
+            Console.WriteLine("inserisci un numero");
+            value = Convert.ToInt32(Console.ReadLine());
+            char c = Convert.ToChar(value);
+            string d = c.ToString();
+            Console.WriteLine($"Il numero {value} convertito in ASCII è {d}");
 
             Console.ReadLine();
         }
